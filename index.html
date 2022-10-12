@@ -23,9 +23,21 @@
   <body>
     <div class="container">
       <header class="header">
+        <picture>
+          <img
+            class="header__pink"
+            alt="Pink Circle"
+            src="./images/header/pink-eclipse.png"
+            srcset="./images/header/pink-eclipse@2x.png 2x"
+          />
+        </picture>
+
         <div class="header__menu">
           <a href="index.html"
-            ><img src="./images/header/logo.png" alt="Ice Cream Company Logo"
+            ><img
+              alt="Ice Cream Company Logo"
+              src="./images/header/logo.png"
+              srcset="./images/header/logo@2x.png 2x"
           /></a>
 
           <nav>
@@ -45,7 +57,21 @@
           <button class="header__menu-button" type="button">
             Buy now
             <svg class="header__menu-button-svg">
-              <use href="/images/sprite.svg#icon-vector"></use>
+              <use href="./images/sprite.svg#icon-vector"></use>
+            </svg>
+          </button>
+
+          <button
+            class="header__menu-mobile js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="header__menu-mobile-svg">
+              <use
+                href="./images/sprite.svg#icon-mobile"
+                width="20"
+                height="12"
+              ></use>
             </svg>
           </button>
         </div>
@@ -82,14 +108,22 @@
         <ul class="header__lorem">
           <li>
             <p class="header__lorem-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipiscing elit,<br />
+              sed do eiusmod tempor<br />
+              incididunt ut labore et
             </p>
           </li>
           <li>
-            <button>
-              <svg>
-                <use></use>
+            <button class="header__lorem-button">
+              <svg class="header__lorem-button-svg">
+                <use
+                  href="./images/sprite.svg#icon-arrow"
+                  width="13"
+                  height="13"
+                  x="6.5"
+                  y="6.5"
+                ></use>
               </svg>
             </button>
           </li>
