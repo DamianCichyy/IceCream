@@ -70,7 +70,7 @@
       cursor: pointer;
       justify-content: center;
       border-style: none;
-      background: #ffffff;
+      background-color: $white;
       border-radius: 22px;
       font-family: $primary-font-family;
       font-weight: map-get($font-weight, bold);
@@ -93,7 +93,7 @@
       &-svg {
         @include transition-fill;
         width: 10px;
-        height: 40px;
+        height: 44px;
         fill: $red;
       }
     }
