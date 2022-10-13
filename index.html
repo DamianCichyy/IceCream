@@ -66,6 +66,16 @@
             </svg>
           </button>
 
+          <button class="header__menu-modal" type="button" data-modal-open>
+            <svg class="header__menu-mobile-svg">
+              <use
+                href="./images/sprite.svg#icon-mobile"
+                width="20"
+                height="12"
+              ></use>
+            </svg>
+          </button>
+
           <button
             class="header__menu-mobile js-open-menu"
             aria-expanded="false"
@@ -165,6 +175,38 @@
         </ul>
       </div>
     </div>
+
+    <div class="modal__background is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__button-exit" data-modal-close>
+          <svg class="modal__button-exit-svg">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="modal__container">
+          <button class="modal__container-button">
+            Buy Now
+            <svg class="modal__container-button-svg">
+              <use href="./images/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <ul class="modal__container-nav">
+            <li><a href="#" class="modal__container-nav-link">Home</a></li>
+            <li><a href="#" class="modal__container-nav-link">About us</a></li>
+            <li>
+              <a href="#" class="modal__container-nav-link">How it's made?</a>
+            </li>
+            <li>
+              <a href="#" class="modal__container-nav-link">Our products</a>
+            </li>
+            <li><a href="#" class="modal__container-nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

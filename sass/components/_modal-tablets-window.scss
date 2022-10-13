@@ -1,0 +1,122 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  .modal {
+    transform: scale(0.7);
+  }
+}
+
+.modal {
+  @include transition-transform;
+  position: absolute;
+  width: 254px;
+  min-height: 508px;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background: $mobile-menu;
+  padding: 60px 34px;
+  z-index: 2;
+
+  &__is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &__background {
+    @include transition-visibility-opacity;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-background-color;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__button-exit {
+    @include flex;
+    position: absolute;
+    top: 23px;
+    right: 34px;
+    border-style: none;
+    width: 14px;
+    height: 14px;
+    background-color: $transparent;
+
+    &:hover svg,
+    &:focus svg {
+      fill: $red;
+    }
+
+    &-svg {
+      @include transition-fill;
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+      fill: $white;
+    }
+  }
+
+  &__container {
+    @include flex-column;
+
+    &-button {
+      @include transition-background-color-color;
+      @include flex;
+      cursor: pointer;
+      justify-content: center;
+      border-style: none;
+      background: #ffffff;
+      border-radius: 22px;
+      font-family: $primary-font-family;
+      font-weight: map-get($font-weight, bold);
+      font-size: map-get($font-size, primary);
+      line-height: 1.313;
+      gap: 16px;
+      color: $red;
+
+      &:hover,
+      &:focus {
+        background-color: $red;
+        color: $white;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        fill: $white;
+      }
+
+      &-svg {
+        @include transition-fill;
+        width: 10px;
+        height: 40px;
+        fill: $red;
+      }
+    }
+
+    &-nav {
+      @include flex-column;
+      gap: 22px;
+      padding-top: 32px;
+
+      &-link {
+        @include transition-color;
+        @include flex;
+        font-family: $primary-font-family;
+        font-weight: map-get($font-weight, bold);
+        font-size: map-get($font-size, secondary);
+        line-height: 1.286;
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: $red;
+        }
+      }
+    }
+  }
+}
