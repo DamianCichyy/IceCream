@@ -12,6 +12,13 @@
     left: 36px;
   }
 
+  &__ice {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 117px;
+  }
+
   &__menu {
     @include flex-row;
     justify-content: space-between;
