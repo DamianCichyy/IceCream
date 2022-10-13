@@ -299,6 +299,10 @@
           border-radius: 50%;
           fill: $red;
         }
+
+        &-desktop {
+          display: none;
+        }
       }
     }
   }
@@ -306,7 +310,7 @@
 
 @media (min-width: 1280px) {
   .header {
-    padding: 37px 115px 0 46px;
+    padding: 37px 115px 56px 46px;
 
     &__pink {
       left: 475px;
@@ -397,6 +401,49 @@
           font-size: map-get($font-size, secondary);
           line-height: 1.286;
           color: $white;
+        }
+      }
+    }
+
+    &__buttons {
+      padding: 25px 0 0 0;
+      gap: 15px;
+
+      &-button {
+        font-size: map-get($font-size, secondary);
+        line-height: 1.283;
+        height: 40px;
+        width: 138px;
+
+        &-one {
+          width: 102px;
+        }
+      }
+    }
+
+    &__lorem {
+      padding: 112px 0 0 219px;
+      gap: 20px;
+
+      &-paragraph {
+        font-size: map-get($font-size, secondary);
+        line-height: 1.429;
+      }
+
+      &-button {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+
+        &-svg {
+          display: none;
+        }
+
+        &-desktop {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          fill: $red;
         }
       }
     }
