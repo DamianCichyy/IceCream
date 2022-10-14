@@ -5,6 +5,14 @@
   z-index: 1;
   overflow: hidden;
 
+  &__white {
+    display: none;
+
+    &-second {
+      display: none;
+    }
+  }
+
   &__pink {
     position: absolute;
     z-index: -2;
@@ -18,7 +26,7 @@
     position: absolute;
     z-index: -1;
     bottom: 0;
-    left: 117px;
+    right: 10%;
     max-width: 171px;
     height: 410px;
   }
@@ -35,17 +43,12 @@
     @include flex-row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 137px;
 
     &-nav {
       display: none;
     }
 
     &-button {
-      display: none;
-    }
-
-    &-modal {
       display: none;
     }
 
@@ -74,6 +77,7 @@
   &__logo {
     @include flex-row;
     justify-content: space-between;
+    padding-top: 137px;
 
     &-header {
       font-family: $secondary-font-family;
@@ -143,17 +147,38 @@
   .header {
     padding: 37px 34px 34px 34px;
 
+    &__white {
+      display: block;
+      position: absolute;
+      max-width: 16px;
+      height: 16px;
+      right: 34px;
+      top: 94px;
+      z-index: -1;
+
+      &-second {
+        display: block;
+        position: absolute;
+        max-width: 16px;
+        height: 16px;
+        right: 34px;
+        top: 151px;
+        z-index: -1;
+      }
+    }
+
     &__pink {
       max-width: 324px;
       height: 322px;
       bottom: 46px;
-      left: 307px;
+      right: 137px;
+      left: unset;
     }
 
     &__ice {
       max-width: 143px;
       height: 336px;
-      left: 378px;
+      right: 247px;
     }
 
     &__milk {
@@ -175,33 +200,6 @@
     }
 
     &__menu {
-      padding-bottom: 0;
-      justify-content: left;
-
-      &-modal {
-        display: block;
-        @include flex;
-        cursor: pointer;
-        width: 20px;
-        height: 12px;
-        border-style: none;
-        background-color: $transparent;
-        margin-left: auto;
-        margin-right: 30px;
-
-        &:hover svg,
-        &:focus svg {
-          fill: $white;
-        }
-
-        &-svg {
-          @include transition-fill;
-          width: 20px;
-          height: 12px;
-          fill: $red;
-        }
-      }
-
       &-button {
         @include transition-background-color-color;
         @include flex;
@@ -238,26 +236,53 @@
       }
 
       &-mobile {
-        display: none;
+        margin-left: auto;
+        margin-right: 30px;
       }
     }
 
     &__logo {
-      padding-top: 15px;
+      @include flex-row;
+      justify-content: space-between;
+      padding-top: 9px;
 
       &-header {
         font-size: map-get($font-size-tablet, small);
         line-height: 1.136;
+        padding-top: 6px;
 
         &-span {
           font-size: map-get($font-size-tablet, bigger);
           line-height: 0.912;
         }
       }
+
+      &-list {
+        @include flex-column;
+        gap: 14px;
+        font-weight: map-get($font-weight, primary);
+        text-align: right;
+        padding-right: 10px;
+
+        &-header {
+          font-family: $secondary-font-family;
+          font-size: map-get($font-size-tablet, big);
+          line-height: 1.143;
+          letter-spacing: map-get($letter-spacing, medium);
+          color: $red;
+        }
+
+        &-paragraph {
+          font-family: $primary-font-family;
+          font-size: map-get($font-size-tablet, smallest);
+          line-height: 1.25;
+          color: $white;
+        }
+      }
     }
 
     &__buttons {
-      padding: 20px 0 0 0;
+      padding: 8px 0 0 0;
     }
 
     &__lorem {
@@ -312,14 +337,29 @@
   .header {
     padding: 37px 115px 56px 46px;
 
+    &__white {
+      max-width: 30px;
+      height: 30px;
+      right: 97px;
+      top: 156px;
+
+      &-second {
+        max-width: 30px;
+        height: 30px;
+        right: 97px;
+        top: 248px;
+      }
+    }
+
     &__pink {
-      left: 475px;
+      right: 267px;
       max-width: 538px;
       height: 538px;
+      bottom: 75px;
     }
 
     &__ice {
-      left: 594px;
+      right: 450px;
       max-width: 236px;
       height: 557px;
     }
@@ -360,14 +400,12 @@
         }
       }
 
-      &-modal {
+      &-mobile {
         display: none;
       }
     }
 
     &__logo {
-      @include flex-row;
-      justify-content: space-between;
       padding-top: 73px;
 
       &-header {
@@ -382,31 +420,23 @@
       }
 
       &-list {
-        @include flex-column;
         gap: 18px;
-        font-weight: map-get($font-weight, primary);
-        text-align: right;
+        padding-right: 0;
 
         &-header {
-          font-family: $secondary-font-family;
           font-size: map-get($font-size-desktop, big);
           line-height: 1.152;
-          text-align: right;
-          letter-spacing: map-get($letter-spacing, medium);
-          color: $red;
         }
 
         &-paragraph {
-          font-family: $primary-font-family;
           font-size: map-get($font-size, secondary);
           line-height: 1.286;
-          color: $white;
         }
       }
     }
 
     &__buttons {
-      padding: 25px 0 0 0;
+      padding-top: 9px;
       gap: 15px;
 
       &-button {
@@ -422,7 +452,7 @@
     }
 
     &__lorem {
-      padding: 112px 0 0 219px;
+      padding: 112px 0 0 249px;
       gap: 20px;
 
       &-paragraph {
@@ -435,15 +465,16 @@
         height: 26px;
         border-radius: 50%;
 
-        &-svg {
-          display: none;
-        }
-
         &-desktop {
+          @include flex;
           width: 26px;
           height: 26px;
           border-radius: 50%;
           fill: $red;
+        }
+
+        &-svg {
+          display: none;
         }
       }
     }

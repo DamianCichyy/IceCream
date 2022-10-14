@@ -24,6 +24,20 @@
     <div class="container">
       <header class="header">
         <img
+          class="header__white"
+          alt="White Circle"
+          src="./images/header/white-eclipse.png"
+          srcset="./images/header/white-eclipse@2x.png 2x"
+        />
+
+        <img
+          class="header__white-second"
+          alt="White Circle"
+          src="./images/header/white-eclipse.png"
+          srcset="./images/header/white-eclipse@2x.png 2x"
+        />
+
+        <img
           class="header__pink"
           alt="Pink Circle"
           src="./images/header/pink-eclipse.png"
@@ -73,7 +87,11 @@
             </ul>
           </nav>
 
-          <button class="header__menu-modal" type="button" data-modal-open>
+          <button
+            class="header__menu-mobile js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
             <svg class="header__menu-mobile-svg">
               <use
                 href="./images/sprite.svg#icon-mobile"
@@ -87,20 +105,6 @@
             Buy now
             <svg class="header__menu-button-svg">
               <use href="./images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </button>
-
-          <button
-            class="header__menu-mobile js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg class="header__menu-mobile-svg">
-              <use
-                href="./images/sprite.svg#icon-mobile"
-                width="20"
-                height="12"
-              ></use>
             </svg>
           </button>
         </div>
@@ -145,9 +149,7 @@
           </li>
           <li>
             <button class="header__lorem-button">
-              <svg
-                class="header__lorem-button-svg header__lorem-button-desktop"
-              >
+              <svg class="header__lorem-button-svg">
                 <use
                   href="./images/sprite.svg#icon-arrow"
                   width="5"
@@ -201,37 +203,6 @@
       </div>
     </div>
 
-    <div class="modal__background is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal__button-exit" data-modal-close>
-          <svg class="modal__button-exit-svg">
-            <use href="./images/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <div class="modal__container">
-          <button class="modal__container-button">
-            Buy Now
-            <svg class="modal__container-button-svg">
-              <use href="./images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </button>
-
-          <ul class="modal__container-nav">
-            <li><a href="#" class="modal__container-nav-link">Home</a></li>
-            <li><a href="#" class="modal__container-nav-link">About us</a></li>
-            <li>
-              <a href="#" class="modal__container-nav-link">How it's made?</a>
-            </li>
-            <li>
-              <a href="#" class="modal__container-nav-link">Our products</a>
-            </li>
-            <li><a href="#" class="modal__container-nav-link">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
