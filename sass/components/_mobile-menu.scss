@@ -107,6 +107,82 @@
 
     &__container {
       padding: 60px 34px;
+
+      &-baner {
+        @include flex-column;
+        position: relative;
+        align-items: center;
+        text-align: center;
+        padding-top: 152px;
+        gap: 30px;
+        height: 485px;
+        background-color: $pink;
+        border-radius: 24px;
+        margin-top: 100px;
+        font-style: normal;
+        color: $white;
+        letter-spacing: map-get($letter-spacing, medium);
+
+        &-png {
+          position: absolute;
+          bottom: 363px;
+        }
+
+        &-header {
+          font-family: $secondary-font-family;
+
+          font-weight: map-get($font-weight, primary);
+          font-size: 20px;
+          line-height: 1.15;
+          letter-spacing: map-get($letter-spacing, medium);
+          text-transform: uppercase;
+        }
+
+        &-list {
+          @include flex-row;
+          gap: 4px;
+
+          &-img {
+            width: 6px;
+            height: 6px;
+          }
+        }
+
+        &-paragraph {
+          font-family: $primary-font-family;
+          font-weight: map-get($font-weight, bold);
+          font-size: 14px;
+          line-height: 1.786;
+        }
+
+        &-button {
+          @include transition-background-color;
+          @include flex;
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border-style: none;
+
+          &:hover,
+          &:focus {
+            background-color: $red;
+          }
+
+          &:hover svg,
+          &:focus svg {
+            fill: $white;
+          }
+
+          &-svg {
+            @include transition-fill;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            fill: $red;
+          }
+        }
+      }
     }
   }
 }
