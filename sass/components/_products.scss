@@ -1,0 +1,26 @@
+.products {
+  @include flex-column;
+  padding: 121px 20px 98px 20px;
+  text-align: center;
+
+  &__h3 {
+    font-family: $secondary-font-family;
+    font-weight: map-get($font-weight, 400);
+    font-size: map-get($font-size-mobile, small);
+    line-height: 1.167;
+    text-transform: uppercase;
+    color: $dark-pink;
+    padding-bottom: 15px;
+  }
+
+  &__h2 {
+    font-family: $secondary-font-family;
+    font-weight: map-get($font-weight, primary);
+    font-size: map-get($font-size-mobile, bigger);
+    line-height: 1.147;
+    letter-spacing: map-get($letter-spacing, medium);
+    text-transform: uppercase;
+    color: $red;
+    padding-bottom: 144px;
+  }
+}
