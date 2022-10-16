@@ -1,0 +1,116 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  .modal {
+    transform: scale(0.7);
+  }
+}
+
+.modal {
+  @include transition-transform;
+  position: absolute;
+  width: calc(100vw - 30px);
+  min-height: 581px;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background-color: $red;
+  border-radius: 4%;
+  padding: 40px 40px;
+  z-index: 999;
+
+  &__is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &__background {
+    @include transition-visibility-opacity;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-background-color;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 999;
+  }
+
+  &__button-exit {
+    &-svg {
+    }
+
+    &:hover svg,
+    &:focus svg {
+    }
+  }
+
+  &__header {
+  }
+
+  &__form {
+    &-label {
+      &:hover &-input,
+      &:focus-within &-input {
+      }
+
+      &:hover &-svg,
+      &:focus-within &-svg {
+      }
+
+      &-paragraph {
+      }
+
+      &-input {
+      }
+
+      &-svg {
+      }
+
+      &-textarea {
+        &:hover,
+        &:focus {
+        }
+      }
+    }
+
+    &-checkbox {
+      &-input:checked ~ &-svg {
+      }
+
+      &-input {
+      }
+
+      &-svg {
+        &:hover,
+        &:focus {
+        }
+
+        &-vector {
+        }
+      }
+
+      &-paragraph {
+        &-links {
+          &:hover,
+          &:focus {
+          }
+        }
+      }
+    }
+
+    &-button {
+      &:hover,
+      &:focus {
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+}
